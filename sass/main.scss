@@ -1,0 +1,23 @@
+@import "./base/typography.scss";
+@import "./utils/variables.scss";
+body {
+    font-size: $initial-font-size;
+}
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    &__heading {
+        font-family: $logo-titre;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
