@@ -125,7 +125,7 @@ main {
 }
 .presentation__btn:hover {
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.52);
-  background: #ae80e5;
+  background: rgba(147, 86, 220, 0.2);
 }
 
 .functioning {
@@ -143,21 +143,37 @@ main {
   align-items: baseline;
 }
 .functioning__btns .btn {
-  font-size: 0.7rem;
-  margin: 2% 0%;
-  padding: 5% 9%;
+  width: 100%;
+  padding: 4% 5%;
+  border: 0px transparent none;
+  border-radius: 1.3rem;
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.308);
+  font-family: Roboto-medium;
+  font-size: 1rem;
+  background: rgba(147, 86, 220, 0);
+  transition: all 800ms;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-left: 0px;
+  padding-right: 3rem;
+  margin: 1rem 0%;
   white-space: nowrap;
 }
+.functioning__btns .btn:hover {
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.52);
+  background: rgba(147, 86, 220, 0.2);
+}
 .functioning__btns .btn span {
+  border-radius: 1rem;
   background-color: #9356DC;
-  padding: 1%;
-  border-radius: 60px 60px;
-  transform: scale(3);
+  padding: 0.27rem 0.5rem;
+  font-size: 0.7em;
+  color: white;
+  transform: translateX(-0.4rem);
 }
 
 .restaurants-liste {
-  background-color: blue;
   padding: 0rem 1rem;
 }
 .restaurants-liste__heading {
