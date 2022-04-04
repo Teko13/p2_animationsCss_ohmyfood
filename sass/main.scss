@@ -3,21 +3,24 @@
 $tertiary-color-invert: invert($tertiary-color);
 $secondary-color-invert: invert($secondary-color);
 $primary-color-invert: invert($primary-color);
-$primary-color-lighten: lighten($primary-color, 50%);
-$gradient-color: linear-gradient(to bottom right, $primary-color-lighten, $primary-color);
+$primary-color-mix-sdry: mix($primary-color, darken($secondary-color, 15%));
+$gradient-color: linear-gradient(to right, $primary-color-mix-sdry, $primary-color);
 $general-font-size: 1rem;
 @mixin button($bg-color: transparent, $font: $text, $font-size: $general-font-size) {
     padding: 4% 5%;
     border: 0px transparent none;
     border-radius: 1.3rem;
-    box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.308);
+    box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
     font-family: $font;
     font-size: $font-size;
     background: $bg-color;
     transition: all 800ms;
     &:hover {
-        box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.52);
         background: rgba($bg-color, 0.2);
+        box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
+        .fa-solid {
+            color: $primary-color;
+        } 
     }
 }
 @mixin restaurant-bg($url) {
@@ -103,9 +106,11 @@ main {
         }
     }
     &__btn {
-        @include button($primary-color, $text, 1rem);
+        @include button($primary-color);
         color: white;
-        margin: 2% 0%;
+        &:hover {
+            background-color: $primary-color-mix-sdry;
+        }
     }
 }
 .functioning {
@@ -130,7 +135,10 @@ main {
            padding-right: 3rem;
             margin: 1rem 0%;
            white-space: nowrap;
-           span {
+           .fa-solid {
+               transition: all 800ms;
+           }
+           .btn-number {
                border-radius: 1rem;
                background-color: $primary-color;
                padding: .27rem .5rem;
