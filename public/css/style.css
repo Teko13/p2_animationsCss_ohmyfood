@@ -70,6 +70,11 @@ main {
   font-family: Shrikhand;
   margin: 0% auto;
 }
+.header__return-btn {
+  font-size: 1.1rem;
+  margin-left: 1rem;
+  color: black;
+}
 
 .location {
   display: flex;
@@ -262,6 +267,7 @@ main {
   font-family: Roboto-light;
 }
 .restaurants-liste .card__content__button-favorie {
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   border: 0px black none;
@@ -295,6 +301,149 @@ main {
 }
 .footer__link span {
   margin-left: 5%;
+}
+
+.cover {
+  width: 100vw;
+  height: 55vw;
+  background-image: url("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(1.1);
+}
+
+.cover-box {
+  overflow: hidden;
+}
+
+@keyframes turns-icon {
+  0% {
+    transform: rotate(1turn);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+  }
+}
+@keyframes price-mover {
+  0% {
+    transform: translate(2rem);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+  }
+}
+@keyframes icon-box-mover {
+  0% {
+    transform: translate(1.5rem);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+}
+.restaurant-page {
+  width: 100vw;
+}
+.restaurant-page__main {
+  transform: scaleY(1.027);
+  border-radius: 1rem 1rem 0rem 0rem;
+  background-color: white;
+  padding: 0rem 1rem;
+}
+.restaurant-page__main__menu__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Shrikhand;
+}
+.restaurant-page__main__menu__heading .fa-heart {
+  color: #ffffff;
+  text-shadow: 3px 0px 0px black, -3px 0px black, 0px 3px 0px black, 0px -3px 0px black;
+  transition: all 700ms;
+  cursor: pointer;
+}
+.restaurant-page__main__menu__heading .fa-heart:hover {
+  color: #FF79DA;
+  text-shadow: 3px 0px 0px #FF79DA, -3px 0px #FF79DA, 0px 3px 0px #FF79DA, 0px -3px 0px #FF79DA;
+}
+.restaurant-page__main__menu__appetizer__heading {
+  font-family: Roboto-light;
+  text-transform: uppercase;
+  border-bottom: 4px #99E2D0 solid;
+  color: #185546;
+  width: 17%;
+}
+.restaurant-page__main__menu__appetizer__btn {
+  background-color: white;
+  border-radius: 0.3rem;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  overflow-x: hidden;
+  box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.308);
+}
+.restaurant-page__main__menu__appetizer__btn:hover .check-icone__fas {
+  animation: turns-icon 1s alternate;
+  animation-iteration-count: 2;
+}
+.restaurant-page__main__menu__appetizer__btn:hover .check-icone {
+  animation: icon-box-mover 1s alternate both;
+  animation-iteration-count: 2;
+}
+.restaurant-page__main__menu__appetizer__btn:hover .appetizer-price {
+  animation: price-mover 1s 80ms alternate both;
+  animation-iteration-count: 2;
+}
+.restaurant-page__main__menu__appetizer__btn .appetizer-infos {
+  padding-left: 0.2rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-page__main__menu__appetizer__btn .appetizer-infos .appetizer-name {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-family: Roboto-medium;
+}
+.restaurant-page__main__menu__appetizer__btn .appetizer-infos .appetizer-name-more {
+  font-family: Roboto-thin;
+}
+.restaurant-page__main__menu__appetizer__btn__slide-checker {
+  display: flex;
+}
+.restaurant-page__main__menu__appetizer__btn__slide-checker .appetizer-price {
+  align-self: flex-end;
+  font-style: normal;
+  font-family: Roboto-bold;
+  margin-right: 0rem;
+  transform: translateX(1.5rem);
+}
+.restaurant-page__main__menu__appetizer__btn__slide-checker .check-icone {
+  width: 2rem;
+  background-color: #99E2D0;
+  display: block;
+  border-radius: 0rem 0.3rem 0.3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.7rem;
+  transform: translateX(2rem);
+}
+.restaurant-page__main__menu__appetizer__btn__slide-checker .check-icone__fas {
+  font-size: 1rem;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
