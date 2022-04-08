@@ -316,6 +316,18 @@ main {
   overflow: hidden;
 }
 
+@keyframes word-cut {
+  0% {
+    width: 70%;
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    width: 65%;
+  }
+  100% {
+    width: 65%;
+  }
+}
 @keyframes turns-icon {
   0% {
     transform: rotate(1turn);
@@ -342,7 +354,7 @@ main {
 }
 @keyframes icon-box-mover {
   0% {
-    transform: translate(1.5rem);
+    transform: translate(2.3rem);
     animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
   }
   30% {
@@ -360,7 +372,11 @@ main {
   transform: scaleY(1.027);
   border-radius: 1rem 1rem 0rem 0rem;
   background-color: white;
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
+}
+.restaurant-page__main__menu {
+  display: flex;
+  flex-direction: column;
 }
 .restaurant-page__main__menu__heading {
   display: flex;
@@ -378,14 +394,19 @@ main {
   color: #FF79DA;
   text-shadow: 3px 0px 0px #FF79DA, -3px 0px #FF79DA, 0px 3px 0px #FF79DA, 0px -3px 0px #FF79DA;
 }
-.restaurant-page__main__menu__appetizer__heading {
+.restaurant-page__main__menu__meals {
+  margin-bottom: 0.8rem;
+}
+.restaurant-page__main__menu__meals__heading {
   font-family: Roboto-light;
   text-transform: uppercase;
   border-bottom: 4px #99E2D0 solid;
   color: #185546;
   width: 17%;
 }
-.restaurant-page__main__menu__appetizer__btn {
+.restaurant-page__main__menu__meals__btn {
+  white-space: nowrap;
+  margin: 1rem 0rem;
   background-color: white;
   border-radius: 0.3rem;
   width: 100%;
@@ -394,56 +415,94 @@ main {
   overflow-x: hidden;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.308);
 }
-.restaurant-page__main__menu__appetizer__btn:hover .check-icone__fas {
+.restaurant-page__main__menu__meals__btn:hover .check-icon__fas {
   animation: turns-icon 1s alternate;
   animation-iteration-count: 2;
 }
-.restaurant-page__main__menu__appetizer__btn:hover .check-icone {
+.restaurant-page__main__menu__meals__btn:hover .check-icon {
   animation: icon-box-mover 1s alternate both;
   animation-iteration-count: 2;
 }
-.restaurant-page__main__menu__appetizer__btn:hover .appetizer-price {
+.restaurant-page__main__menu__meals__btn:hover .meals-infos {
+  animation: word-cut 1s alternate;
+  animation-iteration-count: 2;
+}
+.restaurant-page__main__menu__meals__btn:hover .meals-price {
   animation: price-mover 1s 80ms alternate both;
   animation-iteration-count: 2;
 }
-.restaurant-page__main__menu__appetizer__btn .appetizer-infos {
-  padding-left: 0.2rem;
+.restaurant-page__main__menu__meals__btn .meals-infos {
+  width: 70%;
+  margin-right: 0%;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
   margin-top: auto;
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
 }
-.restaurant-page__main__menu__appetizer__btn .appetizer-infos .appetizer-name {
+.restaurant-page__main__menu__meals__btn .meals-infos .meals-name {
   margin-top: 0%;
   margin-bottom: 0%;
   font-family: Roboto-medium;
 }
-.restaurant-page__main__menu__appetizer__btn .appetizer-infos .appetizer-name-more {
+.restaurant-page__main__menu__meals__btn .meals-infos .meals-name-more {
   font-family: Roboto-thin;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.restaurant-page__main__menu__appetizer__btn__slide-checker {
+.restaurant-page__main__menu__meals__btn__slide-checker {
   display: flex;
 }
-.restaurant-page__main__menu__appetizer__btn__slide-checker .appetizer-price {
+.restaurant-page__main__menu__meals__btn__slide-checker .meals-price {
+  background-color: inherit;
+  font-size: 0.8rem;
   align-self: flex-end;
   font-style: normal;
   font-family: Roboto-bold;
   margin-right: 0rem;
-  transform: translateX(1.5rem);
+  transform: translateX(2rem);
+  margin-bottom: 0.26rem;
 }
-.restaurant-page__main__menu__appetizer__btn__slide-checker .check-icone {
-  width: 2rem;
+.restaurant-page__main__menu__meals__btn__slide-checker .check-icon {
+  padding: 0.7rem 0rem;
+  width: 2.3rem;
   background-color: #99E2D0;
   display: block;
   border-radius: 0rem 0.3rem 0.3rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 0.7rem;
-  transform: translateX(2rem);
+  margin-left: 1rem;
+  transform: translateX(2.3rem);
 }
-.restaurant-page__main__menu__appetizer__btn__slide-checker .check-icone__fas {
+.restaurant-page__main__menu__meals__btn__slide-checker .check-icon__fas {
   font-size: 1rem;
   color: white;
+}
+.restaurant-page__main__validation-btn {
+  padding: 4% 5%;
+  border: 0px transparent none;
+  border-radius: 1.3rem;
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
+  font-family: Roboto-medium;
+  font-size: 1rem;
+  background: #9356DC;
+  transition: all 800ms;
+  color: white;
+  display: inline;
+  align-self: center;
+  margin: 1.5rem 0rem;
+}
+.restaurant-page__main__validation-btn:hover {
+  background: rgba(147, 86, 220, 0.2);
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
+}
+.restaurant-page__main__validation-btn:hover .fa-solid {
+  color: #9356DC;
+}
+.restaurant-page__main__validation-btn:hover {
+  background-color: #c942d1;
 }
 
 /*# sourceMappingURL=style.css.map */

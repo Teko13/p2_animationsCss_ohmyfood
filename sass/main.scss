@@ -269,6 +269,19 @@ main {
 .cover-box {
     overflow: hidden;
 }
+@keyframes word-cut {
+    
+    0% {
+        width: 70%;
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+    }
+    30% {
+        width: 65%;
+    }
+    100% {
+        width: 65%;
+    }
+}
 @keyframes turns-icon {
     0% {
         transform: rotate(1turn);
@@ -297,7 +310,7 @@ main {
 }
 @keyframes icon-box-mover {
     0% {
-        transform: translate(1.5rem);
+        transform: translate(2.3rem);
         animation-timing-function: cubic-bezier(0,0,.01,1);
 
     }
@@ -316,8 +329,10 @@ main {
         transform: scaleY(1.027);
         border-radius: 1rem 1rem 0rem 0rem;
         background-color: white;
-        padding: 0rem 1rem;
+        padding: 0rem .5rem;
         &__menu {
+            display: flex;
+            flex-direction: column;
            &__heading {
             display: flex;
             justify-content: space-between;
@@ -328,7 +343,8 @@ main {
                 cursor: pointer;
             }
            }
-           &__appetizer {
+           &__meals {
+               margin-bottom: .8rem;
                &__heading {
                    font-family: $text-light;
                    text-transform: uppercase;
@@ -337,6 +353,8 @@ main {
                    width: 17%;
                }
                &__btn {
+                   white-space: nowrap;
+                   margin: 1rem 0rem;
                    background-color: white;
                    border-radius: .3rem;
                    width: 100%;
@@ -345,52 +363,67 @@ main {
                    overflow-x: hidden;
                    box-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 0.308);
                    &:hover {
-                    .check-icone__fas {
+                    .check-icon__fas {
                         animation: turns-icon 1s alternate;
                         animation-iteration-count: 2;
                     }
-                       .check-icone {
+                       .check-icon {
                            animation: icon-box-mover 1s alternate both;
                            animation-iteration-count: 2;
                        }
-                       .appetizer-price {
+                       .meals-infos {
+                         animation: word-cut 1s alternate;
+                         animation-iteration-count: 2;
+                       }
+                       .meals-price {
                            animation: price-mover 1s 80ms alternate both;
                            animation-iteration-count: 2;
                        }
                    }
-                   .appetizer-infos {
-                       padding-left: .2rem;
+                   .meals-infos {
+                       width: 70%;
+                       margin-right: 0%;
+                       font-size: .8rem;
+                       padding-left: .5rem;
                        margin-top: auto;
+                       margin-bottom: auto;
                        display: flex;
                        flex-direction: column;
-                       .appetizer-name {
+                       .meals-name {
                            margin-top: 0%;
                            margin-bottom: 0%;
                            font-family: $text-medium;
                        }
-                       .appetizer-name-more {
+                       .meals-name-more {
                         font-family: $text-thin;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
                     }
                    }
                    &__slide-checker {
                        display: flex;
-                       .appetizer-price {
+                       .meals-price {
+                        background-color: inherit;
+                        font-size: .8rem;
                         align-self: flex-end;
                         font-style: normal;
                         font-family: $text-bold;
                         margin-right: 0rem;
-                        transform: translateX(1.5rem);
+                        transform: translateX(2rem);
+                        margin-bottom: .26rem;
                     }
-                    .check-icone {
-                        width: 2rem;
+                    .check-icon {
+                        padding: .7rem 0rem;
+                        width: 2.3rem;
                         background-color: $tertiary-color;
                         display: block;
                         border-radius: 0rem .3rem .3rem 0rem;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        margin-left: .7rem;
-                        transform: translateX(2rem);
+                        margin-left: 1rem;
+                        transform: translateX(2.3rem);
                         &__fas {
                             font-size: 1rem;
                             color: white;
@@ -399,6 +432,16 @@ main {
                    }
                }
            }
+        }
+        &__validation-btn {
+            @include button($primary-color);
+            color: white;
+            display: inline;
+            align-self: center;
+            margin: 1.5rem 0rem;
+            &:hover {
+                background-color: $primary-color-mix-sdry;
+            }
         }
     }
 }
