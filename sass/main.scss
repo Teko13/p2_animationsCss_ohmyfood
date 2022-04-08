@@ -6,6 +6,84 @@ $primary-color-invert: invert($primary-color);
 $primary-color-mix-sdry: mix($primary-color, darken($secondary-color, 15%));
 $gradient-color: linear-gradient(to right, $primary-color-mix-sdry, $primary-color);
 $general-font-size: 1rem;
+$appetizers-display-duration: 800ms;
+$dishes-display-duration: $appetizers-display-duration;
+$desserts-display-duration: $appetizers-display-duration;
+$initial-delay: 600ms;
+$delay-map:(
+    ".appetizers": $initial-delay,
+    ".dishes": ($appetizers-display-duration) - $initial-delay,
+    ".desserts": ($appetizers-display-duration + $dishes-display-duration) - $initial-delay,
+);
+@keyframes meals-animation {
+    0% {
+        opacity: 0;
+        transform: scaleY(.7rem);
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+    }
+    70% {
+        opacity: .7;
+        transform: scaleY(.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: initial;
+    }
+}
+@keyframes word-cut {
+    
+    0% {
+        width: 70%;
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+    }
+    30% {
+        width: 65%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+@keyframes turns-icon {
+    0% {
+        transform: rotate(1turn);
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+    }
+    30% {
+        transform: initial;
+    }
+    100% {
+        transform: initial;
+    }
+}
+@keyframes price-mover {
+    0% {
+        transform: translate(2rem);
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+
+    }
+    30% {
+        transform: initial;
+    }
+
+    100% {
+        transform: initial;
+    }
+}
+@keyframes icon-box-mover {
+    0% {
+        transform: translate(2.3rem);
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+
+    }
+    30% {
+        transform: initial;
+    }
+    100% {
+        transform: initial;
+        animation-timing-function: cubic-bezier(0,0,.01,1);
+
+    }
+}
 @mixin button($bg-color: transparent, $font: $text, $font-size: $general-font-size) {
     padding: 4% 5%;
     border: 0px transparent none;
@@ -21,6 +99,15 @@ $general-font-size: 1rem;
         .fa-solid {
             color: $primary-color;
         } 
+    }
+}
+@mixin meals-animation($delay) {
+    @each $section, $animation-delay in $delay {
+        #{$section} {
+            animation: meals-animation both;
+            animation-duration: $appetizers-display-duration;
+            animation-delay: $animation-delay;
+        }
     }
 }
 @mixin restaurant-bg($url) {
@@ -269,60 +356,6 @@ main {
 .cover-box {
     overflow: hidden;
 }
-@keyframes word-cut {
-    
-    0% {
-        width: 70%;
-        animation-timing-function: cubic-bezier(0,0,.01,1);
-    }
-    30% {
-        width: 65%;
-    }
-    100% {
-        width: 65%;
-    }
-}
-@keyframes turns-icon {
-    0% {
-        transform: rotate(1turn);
-        animation-timing-function: cubic-bezier(0,0,.01,1);
-    }
-    30% {
-        transform: initial;
-    }
-    100% {
-        transform: initial;
-    }
-}
-@keyframes price-mover {
-    0% {
-        transform: translate(2rem);
-        animation-timing-function: cubic-bezier(0,0,.01,1);
-
-    }
-    30% {
-        transform: initial;
-    }
-
-    100% {
-        transform: initial;
-    }
-}
-@keyframes icon-box-mover {
-    0% {
-        transform: translate(2.3rem);
-        animation-timing-function: cubic-bezier(0,0,.01,1);
-
-    }
-    30% {
-        transform: initial;
-    }
-    100% {
-        transform: initial;
-        animation-timing-function: cubic-bezier(0,0,.01,1);
-
-    }
-}
 .restaurant-page {
     width: 100vw;
     &__main {
@@ -445,4 +478,5 @@ main {
         }
     }
 }
+@include meals-animation($delay-map)
 

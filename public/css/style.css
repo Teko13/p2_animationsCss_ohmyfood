@@ -38,6 +38,70 @@
   font-family: Roboto-bold-italic;
   src: url("../../public/fonts/Roboto/Roboto-BoldItalic.ttf");
 }
+@keyframes meals-animation {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.7rem);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scaleY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}
+@keyframes word-cut {
+  0% {
+    width: 70%;
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    width: 65%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes turns-icon {
+  0% {
+    transform: rotate(1turn);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+  }
+}
+@keyframes price-mover {
+  0% {
+    transform: translate(2rem);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+  }
+}
+@keyframes icon-box-mover {
+  0% {
+    transform: translate(2.3rem);
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+  30% {
+    transform: initial;
+  }
+  100% {
+    transform: initial;
+    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
+  }
+}
 html {
   font-size: 5vw;
 }
@@ -316,55 +380,6 @@ main {
   overflow: hidden;
 }
 
-@keyframes word-cut {
-  0% {
-    width: 70%;
-    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
-  }
-  30% {
-    width: 65%;
-  }
-  100% {
-    width: 65%;
-  }
-}
-@keyframes turns-icon {
-  0% {
-    transform: rotate(1turn);
-    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
-  }
-  30% {
-    transform: initial;
-  }
-  100% {
-    transform: initial;
-  }
-}
-@keyframes price-mover {
-  0% {
-    transform: translate(2rem);
-    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
-  }
-  30% {
-    transform: initial;
-  }
-  100% {
-    transform: initial;
-  }
-}
-@keyframes icon-box-mover {
-  0% {
-    transform: translate(2.3rem);
-    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
-  }
-  30% {
-    transform: initial;
-  }
-  100% {
-    transform: initial;
-    animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
-  }
-}
 .restaurant-page {
   width: 100vw;
 }
@@ -503,6 +518,24 @@ main {
 }
 .restaurant-page__main__validation-btn:hover {
   background-color: #c942d1;
+}
+
+.appetizers {
+  animation: meals-animation both;
+  animation-duration: 800ms;
+  animation-delay: 600ms;
+}
+
+.dishes {
+  animation: meals-animation both;
+  animation-duration: 800ms;
+  animation-delay: 200ms;
+}
+
+.desserts {
+  animation: meals-animation both;
+  animation-duration: 800ms;
+  animation-delay: 1000ms;
 }
 
 /*# sourceMappingURL=style.css.map */
