@@ -12,7 +12,7 @@ $dishes-display-duration: $appetizers-display-duration;
 $desserts-display-duration: $appetizers-display-duration;
 $initial-delay: 600ms;
 $section-map:(
-    appetizer:("#appetizer-1", "#appetizer-2", "#appetizer-3"),
+    appetizer:("#appetizer-1", "#appetizer-2", "#appetizer-3", "#appetizer-4"),
     dishe:("#dishe-1", "#dishe-2", "#dishe-3"),
     dessert:("#dessert-1", "#dessert-2", "#dessert-3"),
 );
@@ -220,7 +220,7 @@ body {
 .accueil {
     animation: accueil 3s both;
     &__content {
-        z-index: -1;
+        z-index: 1;
         animation: content-animtion 3s both;
     }
     &__loading {
@@ -228,7 +228,7 @@ body {
         justify-content: center;
         align-items: center;
         width: 100vw;
-        z-index: 1;
+        z-index: -1;
         height: 100vh;
         background-color: transparent;
         position: absolute;
@@ -456,9 +456,21 @@ main {
         }
     }
 }
-.cover {
+.cover-laPaletteDG {
 
     @include cover("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg")
+}
+.cover-laNote {
+
+    @include cover("../image/stil-u2Lp8tXIcjw-unsplash.jpg")
+}
+.cover-aLaFrancaise {
+
+    @include cover("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg")
+}
+.cover-leDeliceDS {
+
+    @include cover("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg")
 }
 .cover-box {
     overflow: hidden;

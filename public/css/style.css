@@ -157,7 +157,7 @@ body {
   animation: accueil 3s both;
 }
 .accueil__content {
-  z-index: -1;
+  z-index: 1;
   animation: content-animtion 3s both;
 }
 .accueil__loading {
@@ -165,7 +165,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  z-index: 1;
+  z-index: -1;
   height: 100vh;
   background-color: transparent;
   position: absolute;
@@ -439,10 +439,37 @@ main {
   margin-left: 5%;
 }
 
-.cover {
+.cover-laPaletteDG {
   width: 100vw;
   height: 55vw;
   background-image: url("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(1.1);
+}
+
+.cover-laNote {
+  width: 100vw;
+  height: 55vw;
+  background-image: url("../image/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(1.1);
+}
+
+.cover-aLaFrancaise {
+  width: 100vw;
+  height: 55vw;
+  background-image: url("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(1.1);
+}
+
+.cover-leDeliceDS {
+  width: 100vw;
+  height: 55vw;
+  background-image: url("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-size: cover;
   background-position: center;
   transform: scaleX(1.1);
@@ -595,22 +622,22 @@ main {
   animation-delay: 1000ms;
 }
 
-#appetizer-1, #appetizer-2, #appetizer-3 {
+#appetizer-1, #appetizer-2, #appetizer-3, #appetizer-4 {
   display: none;
 }
-#appetizer-1:checked + label .check-icon__fas, #appetizer-2:checked + label .check-icon__fas, #appetizer-3:checked + label .check-icon__fas {
+#appetizer-1:checked + label .check-icon__fas, #appetizer-2:checked + label .check-icon__fas, #appetizer-3:checked + label .check-icon__fas, #appetizer-4:checked + label .check-icon__fas {
   animation: turns-icon 1s alternate;
   animation-iteration-count: 2;
 }
-#appetizer-1:checked + label .check-icon, #appetizer-2:checked + label .check-icon, #appetizer-3:checked + label .check-icon {
+#appetizer-1:checked + label .check-icon, #appetizer-2:checked + label .check-icon, #appetizer-3:checked + label .check-icon, #appetizer-4:checked + label .check-icon {
   animation: icon-box-mover 1s alternate both;
   animation-iteration-count: 2;
 }
-#appetizer-1:checked + label .meals-infos, #appetizer-2:checked + label .meals-infos, #appetizer-3:checked + label .meals-infos {
+#appetizer-1:checked + label .meals-infos, #appetizer-2:checked + label .meals-infos, #appetizer-3:checked + label .meals-infos, #appetizer-4:checked + label .meals-infos {
   animation: word-cut 1s alternate;
   animation-iteration-count: 2;
 }
-#appetizer-1:checked + label .meals-price, #appetizer-2:checked + label .meals-price, #appetizer-3:checked + label .meals-price {
+#appetizer-1:checked + label .meals-price, #appetizer-2:checked + label .meals-price, #appetizer-3:checked + label .meals-price, #appetizer-4:checked + label .meals-price {
   animation: price-mover 1s 80ms alternate both;
   animation-iteration-count: 2;
 }
