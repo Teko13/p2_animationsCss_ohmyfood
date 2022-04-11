@@ -5,164 +5,154 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
     <title>À la française</title>
 </head>
 
-<body>
-    <header>
-        <h1>ohmyfood</h1>
-        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+<body class="restaurant-page">
+    <header class="header">
+        <a class="header__return-btn" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+        <h1 class="header__heading">ohmyfood</h1>
     </header>
-    <main>
-        <div class="cover"></div>
-        <section class="menu">
-            <div class="menu__heading">
+    <div class="cover-box">
+        <div class="cover-aLaFrancaise"></div>
+    </div>
+    <main class="restaurant-page__main">
+        <section class="restaurant-page__main__menu">
+            <div class="restaurant-page__main__menu__heading">
                 <h2>À la francaise</h2>
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
             </div>
-            <section class="entrees">
-                <h3>entrées</h3>
-                <div>
-                    <div>
-                        <h4>Tartare de poulpe acidulé</h4>
-                        <div class="details">
-                            <span>Aux zestes d'orange</span>
-                            <em>25€</em>
-                        </div>
+            <form class="restaurant-page__main__menu__meals appetizers">
+                <h3 class="restaurant-page__main__menu__meals__heading">entrées</h3>
+                <input type="checkbox" id="appetizer-1">
+                <label for="appetizer-1" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Tartare de poulpe acidulé</h4>
+                        <span class="meals-name-more">Aux zestes d'orange</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Velouté de légumes d'antan</h4>
-                        <div class="details">
-                            <span>Carotte, panais, topinambour</span>
-                            <em>35€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">25€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="appetizer-2">
+                <label for="appetizer-2" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Velouté de légumes d'antan</h4>
+                        <span class="meals-name-more">Carotte, panais, topinambour</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Soupe à l'oignon</h4>
-                        <div class="details">
-                            <span>Revisitée</span>
-                            <em>20€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">35€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="appetizer-3">
+                <label for="appetizer-3" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Soupe à l'oignon</h4>
+                        <span class="meals-name-more">Revisitée</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-            </section>
-            <section class="plats">
-                <h3>plats</h3>
-                <div>
-                    <div>
-                        <h4>Coquilles Saint-Jacques</h4>
-                        <div class="details">
-                            <span>Accompagnées d'une purée de panais</span>
-                            <em>40€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">20€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+            </form>
+            <form class="restaurant-page__main__menu__meals dishes">
+                <h3 class="restaurant-page__main__menu__meals__heading">Plats</h3>
+                <input type="checkbox" id="dishe-1">
+                <label for="dishe-1" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Coquilles Saint-Jacque
+                        </h4>
+                        <span class="meals-name-more">Accompagnées d'une purée de panais</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Magret de canard</h4>
-                        <div class="details">
-                            <span>Et parmentier de pommes de terre</span>
-                            <em>35€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">40€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="dishe-2">
+                <label for="dishe-2" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Magret de canard</h4>
+                        <span class="meals-name-more">Et parmentier de pommes de terre</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-                        <div class="details">
-                            <span>Sur son lit de gnocchis aux légumes</span>
-                            <em>44€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">35€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="dishe-3">
+                <label for="dishe-3" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Pigeonneau d’Ille-et-Vilaine</h4>
+                        <span class="meals-name-more">Sur son lit de gnocchis aux légumes</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-            </section>
-            <section class="desserts">
-                <h3>desserts</h3>
-                <div>
-                    <div>
-                        <h4>Pétales de violettes glacés</h4>
-                        <div class="details">
-                            <span>Et purée de noisettes</span>
-                            <em>18€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">44€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+            </form>
+            <form class="restaurant-page__main__menu__meals desserts">
+                <h3 class="restaurant-page__main__menu__meals__heading">Desserts</h3>
+                <input type="checkbox" id="dessert-1">
+                <label for="dessert-1" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Pétales de violettes glacés
+                        </h4>
+                        <span class="meals-name-more">Et purée de noisettes</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Fondant au chocolat</h4>
-                        <div class="details">
-                            <span>Revisité</span>
-                            <em>22€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">18€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="dessert-2">
+                <label for="dessert-2" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Fondant au chocolat</h4>
+                        <span class="meals-name-more">Revisité</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-                <div>
-                    <div>
-                        <h4>Millefeuille croustillant</h4>
-                        <div class="details">
-                            <span>Myrtilles et pâte d’amande</span>
-                            <em>23€</em>
-                        </div>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">22€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+                <input type="checkbox" id="dessert-3">
+                <label for="dessert-3" class="restaurant-page__main__menu__meals__btn">
+                    <div class="meals-infos">
+                        <h4 class="meals-name">Millefeuille croustillant</h4>
+                        <span class="meals-name-more">Myrtilles et pâte d’amande</span>
                     </div>
-                    <button>
-                        <i class="fas fa-check-circle"></i>
-                    </button>
-                </div>
-            </section>
-            <button>
+                    <span class="restaurant-page__main__menu__meals__btn__slide-checker">
+                        <em class="meals-price">23€</em>
+                        <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
+                    </span>
+                </label>
+            </form>
+            <button class="restaurant-page__main__validation-btn">
                 Commander
             </button>
         </section>
     </main>
-    <footer>
-        <h2>ohmyfood</h2>
-        <div>
-            <div>
-                <i class="fa-solid fa-utensils"></i>
-                <a href="#">Proposer un restaurant</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-handshake-angle"></i>
-                <a href="#">Devenir partenaire</a>
-            </div>
-            <div>
-                <a href="#">Mention légales</a>
-            </div>
-            <div>
-                <a href="#">Contact</a>
-            </div>
-        </div>
+    <footer class="footer">
+        <h2 class="footer__header">ohmyfood</h2>
+        <a href="#" class="footer__link">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Proposer un restaurant</span>
+        </a>
+        <a href="#" class="footer__link">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <span>Devenir partenaire</span>
+        </a>
+        <a href="#" class="footer__link">Mention légales</a>
+        <a href="#" class="footer__link">Contact</a>
     </footer>
 </body>
 
