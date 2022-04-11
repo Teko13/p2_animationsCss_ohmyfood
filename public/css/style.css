@@ -102,12 +102,84 @@
     animation-timing-function: cubic-bezier(0, 0, 0.01, 1);
   }
 }
+@keyframes accueil {
+  0% {
+    overflow-y: hidden;
+  }
+  99% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
+@keyframes loading {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes spiner {
+  0% {
+    border-top-color: #9356DC;
+  }
+  50% {
+    border-top-color: #99E2D0;
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes content-animtion {
+  0%, 90% {
+    height: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+  }
+  100% {
+    height: 100%;
+    overflow: scroll;
+  }
+}
 html {
   font-size: 5vw;
 }
 
 body {
   margin: 0px;
+}
+
+.accueil {
+  animation: accueil 3s both;
+}
+.accueil__content {
+  z-index: -1;
+  animation: content-animtion 3s both;
+}
+.accueil__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  z-index: 1;
+  height: 100vh;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  animation: loading 3s forwards;
+}
+.accueil__loading::after {
+  content: "";
+  width: 50%;
+  height: 50vw;
+  border: 7px transparent solid;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spiner 1s infinite;
 }
 
 main {
@@ -420,6 +492,7 @@ main {
   width: 17%;
 }
 .restaurant-page__main__menu__meals__btn {
+  cursor: pointer;
   white-space: nowrap;
   margin: 1rem 0rem;
   background-color: white;
@@ -429,22 +502,6 @@ main {
   display: flex;
   overflow-x: hidden;
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.308);
-}
-.restaurant-page__main__menu__meals__btn:hover .check-icon__fas {
-  animation: turns-icon 1s alternate;
-  animation-iteration-count: 2;
-}
-.restaurant-page__main__menu__meals__btn:hover .check-icon {
-  animation: icon-box-mover 1s alternate both;
-  animation-iteration-count: 2;
-}
-.restaurant-page__main__menu__meals__btn:hover .meals-infos {
-  animation: word-cut 1s alternate;
-  animation-iteration-count: 2;
-}
-.restaurant-page__main__menu__meals__btn:hover .meals-price {
-  animation: price-mover 1s 80ms alternate both;
-  animation-iteration-count: 2;
 }
 .restaurant-page__main__menu__meals__btn .meals-infos {
   width: 70%;
@@ -536,6 +593,66 @@ main {
   animation: meals-animation both;
   animation-duration: 800ms;
   animation-delay: 1000ms;
+}
+
+#appetizer-1, #appetizer-2, #appetizer-3 {
+  display: none;
+}
+#appetizer-1:checked + label .check-icon__fas, #appetizer-2:checked + label .check-icon__fas, #appetizer-3:checked + label .check-icon__fas {
+  animation: turns-icon 1s alternate;
+  animation-iteration-count: 2;
+}
+#appetizer-1:checked + label .check-icon, #appetizer-2:checked + label .check-icon, #appetizer-3:checked + label .check-icon {
+  animation: icon-box-mover 1s alternate both;
+  animation-iteration-count: 2;
+}
+#appetizer-1:checked + label .meals-infos, #appetizer-2:checked + label .meals-infos, #appetizer-3:checked + label .meals-infos {
+  animation: word-cut 1s alternate;
+  animation-iteration-count: 2;
+}
+#appetizer-1:checked + label .meals-price, #appetizer-2:checked + label .meals-price, #appetizer-3:checked + label .meals-price {
+  animation: price-mover 1s 80ms alternate both;
+  animation-iteration-count: 2;
+}
+
+#dishe-1, #dishe-2, #dishe-3 {
+  display: none;
+}
+#dishe-1:checked + label .check-icon__fas, #dishe-2:checked + label .check-icon__fas, #dishe-3:checked + label .check-icon__fas {
+  animation: turns-icon 1s alternate;
+  animation-iteration-count: 2;
+}
+#dishe-1:checked + label .check-icon, #dishe-2:checked + label .check-icon, #dishe-3:checked + label .check-icon {
+  animation: icon-box-mover 1s alternate both;
+  animation-iteration-count: 2;
+}
+#dishe-1:checked + label .meals-infos, #dishe-2:checked + label .meals-infos, #dishe-3:checked + label .meals-infos {
+  animation: word-cut 1s alternate;
+  animation-iteration-count: 2;
+}
+#dishe-1:checked + label .meals-price, #dishe-2:checked + label .meals-price, #dishe-3:checked + label .meals-price {
+  animation: price-mover 1s 80ms alternate both;
+  animation-iteration-count: 2;
+}
+
+#dessert-1, #dessert-2, #dessert-3 {
+  display: none;
+}
+#dessert-1:checked + label .check-icon__fas, #dessert-2:checked + label .check-icon__fas, #dessert-3:checked + label .check-icon__fas {
+  animation: turns-icon 1s alternate;
+  animation-iteration-count: 2;
+}
+#dessert-1:checked + label .check-icon, #dessert-2:checked + label .check-icon, #dessert-3:checked + label .check-icon {
+  animation: icon-box-mover 1s alternate both;
+  animation-iteration-count: 2;
+}
+#dessert-1:checked + label .meals-infos, #dessert-2:checked + label .meals-infos, #dessert-3:checked + label .meals-infos {
+  animation: word-cut 1s alternate;
+  animation-iteration-count: 2;
+}
+#dessert-1:checked + label .meals-price, #dessert-2:checked + label .meals-price, #dessert-3:checked + label .meals-price {
+  animation: price-mover 1s 80ms alternate both;
+  animation-iteration-count: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
