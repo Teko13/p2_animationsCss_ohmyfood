@@ -450,6 +450,7 @@ main {
   flex-direction: column;
 }
 .restaurants-liste .card__content__info__name {
+  margin-top: 1rem;
   font-weight: normal;
   margin-bottom: 0px;
   font-size: 1rem;
@@ -461,6 +462,7 @@ main {
   font-family: Roboto-light;
 }
 .restaurants-liste .card__content__button-favorie {
+  margin-top: 1rem;
   cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
