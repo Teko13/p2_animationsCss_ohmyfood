@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.0/css/all.css">
@@ -21,7 +21,7 @@
         <div class="cover-laPaletteDG"></div>
     </div>
     <main class="restaurant-page__main">
-        <section class="restaurant-page__main__menu">
+        <section class="restaurant-page__main__menu container">
             <div class="restaurant-page__main__menu__heading">
                 <h2>La palette du goût</h2>
                 <i class="fa-solid fa-heart"></i>
@@ -30,10 +30,10 @@
                 <h3 class="restaurant-page__main__menu__meals__heading">entrées</h3>
                 <input type="checkbox" id="appetizer-1">
                 <label for="appetizer-1" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Fricassée d'escargot</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Fricassée d'escargot</span>
                         <span class="meals-name-more">Au piment d'Espelette</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">25€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -41,10 +41,10 @@
                 </label>
                 <input type="checkbox" id="appetizer-2">
                 <label for="appetizer-2" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Foie gras de canard mi-cuit</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Foie gras de canard mi-cuit</span>
                         <span class="meals-name-more">Et ses copeaux de truffe noire</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">35€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -52,10 +52,10 @@
                 </label>
                 <input type="checkbox" id="appetizer-3">
                 <label for="appetizer-3" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Oeuf au plat</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Oeuf au plat</span>
                         <span class="meals-name-more">Assaisonné à la truffe sur lit de caviar</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">20€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -66,11 +66,11 @@
                 <h3 class="restaurant-page__main__menu__meals__heading">Plats</h3>
                 <input type="checkbox" id="dishe-1">
                 <label for="dishe-1" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Filet de boeuf aux herbes
-                        </h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Filet de boeuf aux herbes
+                        </span>
                         <span class="meals-name-more">Accompagné de sa ribambelle de légumes</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">40€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -78,10 +78,10 @@
                 </label>
                 <input type="checkbox" id="dishe-2">
                 <label for="dishe-2" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Parmentier de queue de boeuf</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Parmentier de queue de boeuf</span>
                         <span class="meals-name-more">À la truffe noire sur sa purée de panais</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">35€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -89,10 +89,10 @@
                 </label>
                 <input type="checkbox" id="dishe-3">
                 <label for="dishe-3" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Filet de turbot</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Filet de turbot</span>
                         <span class="meals-name-more">Aux agrumes</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">44€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -103,11 +103,11 @@
                 <h3 class="restaurant-page__main__menu__meals__heading">Desserts</h3>
                 <input type="checkbox" id="dessert-1">
                 <label for="dessert-1" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Paris-Brest
-                        </h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Paris-Brest
+                        </span>
                         <span class="meals-name-more">Revisité</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">18€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -115,10 +115,10 @@
                 </label>
                 <input type="checkbox" id="dessert-2">
                 <label for="dessert-2" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Macaron au chocolat d'exception</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Macaron au chocolat d'exception</span>
                         <span class="meals-name-more">Et glace à la vanille de Madagascar</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">22€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>
@@ -126,10 +126,10 @@
                 </label>
                 <input type="checkbox" id="dessert-3">
                 <label for="dessert-3" class="restaurant-page__main__menu__meals__btn">
-                    <div class="meals-infos">
-                        <h4 class="meals-name">Mousse au chocolat</h4>
+                    <span class="meals-infos">
+                        <span class="meals-name">Mousse au chocolat</span>
                         <span class="meals-name-more">Au piment d'Espelette et à la truffe noire</span>
-                    </div>
+                    </span>
                     <span class="restaurant-page__main__menu__meals__btn__slide-checker">
                         <em class="meals-price">23€</em>
                         <span class="check-icon"><i class="fas fa-check-circle check-icon__fas"></i></span>

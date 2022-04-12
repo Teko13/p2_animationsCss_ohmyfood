@@ -181,6 +181,12 @@ body {
   border-radius: 50%;
   animation: spiner 1s infinite;
 }
+@media screen and (min-width: 600px) {
+  .accueil__loading::after {
+    width: 300px;
+    height: 300px;
+  }
+}
 
 main {
   padding: 0.5%;
@@ -189,7 +195,7 @@ main {
 .container {
   box-sizing: border-box;
   width: 100%;
-  max-width: 920px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -212,6 +218,15 @@ main {
   color: black;
 }
 
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  .header {
+    font-size: 1rem;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
@@ -259,19 +274,38 @@ main {
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
   font-family: Roboto-medium;
   font-size: 1rem;
-  background: #9356DC;
-  transition: all 800ms;
+  background: linear-gradient(to bottom right, #db57ba, #9356DC);
+  z-index: 1;
+  position: relative;
   color: white;
+  display: inline;
+  align-self: center;
+  margin: 1.5rem 0rem;
+  transition: all 800ms;
 }
 .presentation__btn:hover {
-  background: rgba(147, 86, 220, 0.2);
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
 }
-.presentation__btn:hover .fa-solid {
-  color: #9356DC;
+.presentation__btn:hover::after {
+  opacity: 1;
 }
-.presentation__btn:hover {
-  background-color: #c942d1;
+.presentation__btn::after {
+  content: "";
+  border-radius: 1.3rem;
+  background: linear-gradient(to bottom right, #db57ba, #b68de7);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 800ms;
+}
+@media screen and (min-width: 600px) {
+  .presentation__btn {
+    padding: 1rem 1.3rem;
+  }
 }
 
 .functioning {
@@ -290,6 +324,7 @@ main {
 }
 .functioning__btns .btn {
   width: 100%;
+  cursor: pointer;
   padding: 4% 5%;
   border: 0px transparent none;
   border-radius: 1.3rem;
@@ -313,6 +348,11 @@ main {
 .functioning__btns .btn:hover .fa-solid {
   color: #9356DC;
 }
+@media screen and (min-width: 600px) {
+  .functioning__btns .btn {
+    padding: 1rem 1.3rem;
+  }
+}
 .functioning__btns .btn .fa-solid {
   transition: all 800ms;
 }
@@ -325,6 +365,26 @@ main {
   transform: translateX(-0.4rem);
 }
 
+@media screen and (min-width: 600px) {
+  .functioning__btns {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    flex-direction: row;
+  }
+  .functioning__btns .btn {
+    width: 30%;
+    margin: 0rem 1rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .functioning__btns {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+  .functioning__btns .btn {
+    width: auto;
+  }
+}
 .restaurants-liste {
   padding: 0rem 1rem;
 }
@@ -345,6 +405,7 @@ main {
   display: block;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.356);
 }
 .restaurants-liste .card__bg {
   border-radius: 0.5rem 0.5rem 0rem 0rem;
@@ -418,6 +479,29 @@ main {
   text-shadow: 3px 0px 0px #FF79DA, -3px 0px #FF79DA, 0px 3px 0px #FF79DA, 0px -3px 0px #FF79DA;
 }
 
+@media screen and (min-width: 600px) {
+  .restaurants-liste__cards {
+    margin-top: 2rem;
+    align-items: center;
+  }
+  .restaurants-liste .card {
+    padding: 0px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    width: 85%;
+    box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.356);
+  }
+  .restaurants-liste .card__bg {
+    width: 100%;
+    height: 35vw;
+  }
+  .restaurants-liste .card__content__info__name {
+    font-size: 1.5rem;
+  }
+  .restaurants-liste .card__content__info__local {
+    font-size: 1.2rem;
+  }
+}
 .footer {
   background-color: #404040;
   color: white;
@@ -447,6 +531,11 @@ main {
   background-position: center;
   transform: scaleX(1.1);
 }
+@media screen and (min-width: 600px) {
+  .cover-laPaletteDG {
+    height: 20vw;
+  }
+}
 
 .cover-laNote {
   width: 100vw;
@@ -455,6 +544,11 @@ main {
   background-size: cover;
   background-position: center;
   transform: scaleX(1.1);
+}
+@media screen and (min-width: 600px) {
+  .cover-laNote {
+    height: 20vw;
+  }
 }
 
 .cover-aLaFrancaise {
@@ -465,6 +559,11 @@ main {
   background-position: center;
   transform: scaleX(1.1);
 }
+@media screen and (min-width: 600px) {
+  .cover-aLaFrancaise {
+    height: 20vw;
+  }
+}
 
 .cover-leDeliceDS {
   width: 100vw;
@@ -473,6 +572,11 @@ main {
   background-size: cover;
   background-position: center;
   transform: scaleX(1.1);
+}
+@media screen and (min-width: 600px) {
+  .cover-leDeliceDS {
+    height: 20vw;
+  }
 }
 
 .cover-box {
@@ -531,6 +635,7 @@ main {
   box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.308);
 }
 .restaurant-page__main__menu__meals__btn .meals-infos {
+  display: block;
   width: 70%;
   margin-right: 0%;
   font-size: 0.8rem;
@@ -586,40 +691,81 @@ main {
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
   font-family: Roboto-medium;
   font-size: 1rem;
-  background: #9356DC;
-  transition: all 800ms;
+  background: linear-gradient(to bottom right, #db57ba, #9356DC);
+  z-index: 1;
+  position: relative;
   color: white;
   display: inline;
   align-self: center;
   margin: 1.5rem 0rem;
+  transition: all 800ms;
 }
 .restaurant-page__main__validation-btn:hover {
-  background: rgba(147, 86, 220, 0.2);
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
 }
-.restaurant-page__main__validation-btn:hover .fa-solid {
-  color: #9356DC;
+.restaurant-page__main__validation-btn:hover::after {
+  opacity: 1;
 }
-.restaurant-page__main__validation-btn:hover {
-  background-color: #c942d1;
+.restaurant-page__main__validation-btn::after {
+  content: "";
+  border-radius: 1.3rem;
+  background: linear-gradient(to bottom right, #db57ba, #b68de7);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 800ms;
+}
+@media screen and (min-width: 600px) {
+  .restaurant-page__main__validation-btn {
+    padding: 1rem 1.3rem;
+  }
 }
 
+@media screen and (min-width: 600px) {
+  .restaurant-page__main__menu__meals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurant-page__main__menu__meals__heading {
+    width: 4%;
+  }
+  .restaurant-page__main__menu__meals__btn {
+    width: 50%;
+    margin: 1.5rem 0rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .restaurant-page__main__menu__meals__btn {
+    width: 70%;
+  }
+  .restaurant-page__main__menu__meals__btn .meals-infos {
+    font-size: 1.3rem;
+  }
+  .restaurant-page__main__menu__meals__btn__slide-checker .meals-price {
+    font-size: 1.3rem;
+  }
+}
 .appetizers {
   animation: meals-animation both;
-  animation-duration: 800ms;
-  animation-delay: 600ms;
+  animation-duration: 600ms;
+  animation-delay: 400ms;
 }
 
 .dishes {
   animation: meals-animation both;
-  animation-duration: 800ms;
-  animation-delay: 200ms;
+  animation-duration: 600ms;
+  animation-delay: 600ms;
 }
 
 .desserts {
   animation: meals-animation both;
-  animation-duration: 800ms;
-  animation-delay: 1000ms;
+  animation-duration: 600ms;
+  animation-delay: 900ms;
 }
 
 #appetizer-1, #appetizer-2, #appetizer-3, #appetizer-4 {
