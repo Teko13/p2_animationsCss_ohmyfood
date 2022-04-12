@@ -55,16 +55,13 @@ $delay-map:(
 @keyframes meals-animation {
     0% {
         opacity: 0;
-        transform: scaleY(.7rem);
+        transform: translateY(.7rem);
         animation-timing-function: cubic-bezier(0,0,.01,1);
-    }
-    70% {
-        opacity: .7;
-        transform: scaleY(.5rem);
     }
     100% {
         opacity: 1;
         transform: initial;
+        animation-timing-function: cubic-bezier(0,.19,0,.97);
     }
 }
 @keyframes word-cut {
