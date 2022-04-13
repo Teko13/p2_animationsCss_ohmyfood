@@ -257,6 +257,7 @@ $delay-map:(
 
 html {
     font-size: $initial-font-size;
+    overflow-x: hidden;
 }
 body {
     margin: 0px;
