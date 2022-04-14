@@ -526,7 +526,7 @@ main {
 .footer__link {
   margin: 1.5% 0%;
   font-family: Roboto-medium;
-  display: inline-block;
+  display: block;
   color: inherit;
   text-decoration: none;
 }
@@ -625,7 +625,6 @@ main {
   width: 1rem;
   position: relative;
   display: inline;
-  margin-top: 1rem;
   margin-right: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
