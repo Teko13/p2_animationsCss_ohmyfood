@@ -202,13 +202,22 @@ $delay-map:(
     }
     
 }
-@mixin favorit-color-changer($initial-color: black, $hover-color: $secondary-color) {
-    color: #ffffff;
-    text-shadow: 3px 0px 0px $initial-color, -3px 0px $initial-color, 0px 3px 0px $initial-color, 0px -3px 0px $initial-color;
-    transition: all 700ms;
-    &:hover {
-        color: $hover-color;
-        text-shadow: 3px 0px 0px $hover-color, -3px 0px $hover-color, 0px 3px 0px $hover-color, 0px -3px 0px $hover-color;
+@mixin favorit-color-changer() {
+    & .fa-solid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $primary-color-saturate;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: all 700ms;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .fa-regular {
+        font-size: 1.2rem;
+        
     }
 }
 @keyframes accueil {
@@ -504,14 +513,17 @@ main {
                 }
             }
             &__button-favorie {
+                width: 1rem;
+                position: relative;
+                display: inline;
                 margin-top: 1rem;
+                margin-right: .2rem;
                 cursor: pointer;
                 font-size: 1rem;
                 background-color: transparent;
                 border: 0px black none;
-                & .fa-heart {
-                    @include favorit-color-changer()
-                }
+                @include favorit-color-changer();
+                
             }
         }
 
@@ -567,6 +579,17 @@ main {
         }
     }
 }
+@media screen and (min-width: 992px) {
+    .footer {
+        .links-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-right: 1rem;
+        }
+        
+    }
+}
 .cover-laPaletteDG {
 
     @include cover("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg")
@@ -601,9 +624,17 @@ main {
             justify-content: space-between;
             align-items: center;
             font-family: $logo-titre;
-            & .fa-heart {
-                @include favorit-color-changer();
+            & .fa-heart-button {
+                width: 1rem;
+                position: relative;
+                display: inline;
+                margin-top: 1rem;
+                margin-right: .2rem;
                 cursor: pointer;
+                font-size: 1rem;
+                background-color: transparent;
+                border: 0px black none;
+                @include favorit-color-changer();
             }
            }
            &__meals {

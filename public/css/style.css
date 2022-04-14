@@ -464,20 +464,30 @@ main {
   font-family: Roboto-light;
 }
 .restaurants-liste .card__content__button-favorie {
+  width: 1rem;
+  position: relative;
+  display: inline;
   margin-top: 1rem;
+  margin-right: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   border: 0px black none;
 }
-.restaurants-liste .card__content__button-favorie .fa-heart {
-  color: #ffffff;
-  text-shadow: 3px 0px 0px black, -3px 0px black, 0px 3px 0px black, 0px -3px 0px black;
+.restaurants-liste .card__content__button-favorie .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #db57ba;
+  font-size: 1.2rem;
+  opacity: 0;
   transition: all 700ms;
 }
-.restaurants-liste .card__content__button-favorie .fa-heart:hover {
-  color: #FF79DA;
-  text-shadow: 3px 0px 0px #FF79DA, -3px 0px #FF79DA, 0px 3px 0px #FF79DA, 0px -3px 0px #FF79DA;
+.restaurants-liste .card__content__button-favorie .fa-solid:hover {
+  opacity: 1;
+}
+.restaurants-liste .card__content__button-favorie .fa-regular {
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -524,6 +534,14 @@ main {
   margin-left: 5%;
 }
 
+@media screen and (min-width: 992px) {
+  .footer .links-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+}
 .cover-laPaletteDG {
   width: 100vw;
   height: 55vw;
@@ -603,15 +621,31 @@ main {
   align-items: center;
   font-family: Shrikhand;
 }
-.restaurant-page__main__menu__heading .fa-heart {
-  color: #ffffff;
-  text-shadow: 3px 0px 0px black, -3px 0px black, 0px 3px 0px black, 0px -3px 0px black;
-  transition: all 700ms;
+.restaurant-page__main__menu__heading .fa-heart-button {
+  width: 1rem;
+  position: relative;
+  display: inline;
+  margin-top: 1rem;
+  margin-right: 0.2rem;
   cursor: pointer;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 0px black none;
 }
-.restaurant-page__main__menu__heading .fa-heart:hover {
-  color: #FF79DA;
-  text-shadow: 3px 0px 0px #FF79DA, -3px 0px #FF79DA, 0px 3px 0px #FF79DA, 0px -3px 0px #FF79DA;
+.restaurant-page__main__menu__heading .fa-heart-button .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #db57ba;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: all 700ms;
+}
+.restaurant-page__main__menu__heading .fa-heart-button .fa-solid:hover {
+  opacity: 1;
+}
+.restaurant-page__main__menu__heading .fa-heart-button .fa-regular {
+  font-size: 1.2rem;
 }
 .restaurant-page__main__menu__meals {
   margin-bottom: 0.8rem;
