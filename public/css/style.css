@@ -268,6 +268,7 @@ main {
 .presentation__btn {
   padding: 4% 5%;
   border: 0px transparent none;
+  cursor: pointer;
   border-radius: 1.3rem;
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
   font-family: Roboto-medium;
@@ -687,6 +688,7 @@ main {
 .restaurant-page__main__validation-btn {
   padding: 4% 5%;
   border: 0px transparent none;
+  cursor: pointer;
   border-radius: 1.3rem;
   box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
   font-family: Roboto-medium;
@@ -826,6 +828,96 @@ main {
 #dessert-1:checked + label .meals-price, #dessert-2:checked + label .meals-price, #dessert-3:checked + label .meals-price {
   animation: price-mover 1s 80ms alternate both;
   animation-iteration-count: 2;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  font-family: Roboto-bold;
+  margin-left: 1rem;
+}
+
+.contact {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: Roboto-medium;
+  font-size: 1rem;
+}
+.contact .email-input, .contact .message-input {
+  border: 1px solid;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  border-radius: 0.7rem;
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+.contact .email-input:focus, .contact .message-input:focus {
+  outline: none;
+}
+.contact .email-input {
+  border-radius: 5rem;
+  transition: all 1s;
+}
+.contact .email-input:invalid {
+  border-color: red;
+}
+.contact label {
+  margin-bottom: 0.5rem;
+}
+.contact .send-button {
+  padding: 4% 5%;
+  border: 0px transparent none;
+  cursor: pointer;
+  border-radius: 1.3rem;
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
+  font-family: Roboto-medium;
+  font-size: 1rem;
+  background: linear-gradient(to bottom right, #db57ba, #9356DC);
+  z-index: 1;
+  position: relative;
+  color: white;
+  display: inline;
+  align-self: center;
+  margin: 1.5rem 0rem;
+  transition: all 800ms;
+}
+.contact .send-button:hover {
+  box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
+}
+.contact .send-button:hover::after {
+  opacity: 1;
+}
+.contact .send-button::after {
+  content: "";
+  border-radius: 1.3rem;
+  background: linear-gradient(to bottom right, #db57ba, #b68de7);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 800ms;
+}
+@media screen and (min-width: 600px) {
+  .contact .send-button {
+    padding: 1rem 1.3rem;
+  }
+}
+.contact .send-button .fas {
+  margin-left: 0.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .contact {
+    align-items: center;
+  }
+  .contact .email-input, .contact .message-input {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

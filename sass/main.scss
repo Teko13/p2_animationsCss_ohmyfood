@@ -120,7 +120,8 @@ $delay-map:(
 }
 @mixin primary-button($bg-color: $gradient-color, $font: $text, $font-size: $general-font-size) {
     padding: 4% 5%;
-    border: 0px transparent none;
+            border: 0px transparent none;
+            cursor: pointer;
             border-radius: 1.3rem;
             box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
             font-family: $font;
@@ -727,6 +728,56 @@ main {
 }
 @include meals-animation($delay-map);
 @include meals-checkbox();
+.contact-heading {
+    font-size: 1.5rem;
+    font-family: $text-bold;
+    margin-left: 1rem;
+}
+.contact {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $text;
+    font-size: 1rem;
+    .email-input, .message-input {
+        border: 1px solid;
+        font-size: .9rem;
+        padding: .4rem;
+        border-radius: .7rem;
+        margin-left: .5rem;
+        margin-bottom: 1rem;
+        width: 80%;
+        &:focus {
+            outline: none;
+        }
+    }
+    .email-input {
+        &:invalid {
+            border-color: red;
+        }
+        border-radius: 5rem;
+        transition: all 1s;
+    
+    }
+    label {
+        margin-bottom: .5rem;
+    }
+    .send-button {
+        @include primary-button();
+        .fas {
+            margin-left: .2rem;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .contact {
+        align-items: center;
+        .email-input, .message-input {
+            width: 50%;
+        }
+    }
+}
 
 
 
