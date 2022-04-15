@@ -1,0 +1,254 @@
+.accueil {
+    animation: accueil 3s both;
+    &__content {
+        z-index: 1;
+        animation: content-animtion 3s both;
+    }
+    &__loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        z-index: -1;
+        height: 100vh;
+        background-color: transparent;
+        position: absolute;
+        top: 0px;
+        animation: loading 3s forwards;
+        &::after {
+            content: "";
+            width: 50%;
+            height: 50vw;
+            border: 7px transparent solid;
+            border-top-color: $primary-color;
+            border-radius: 50%;
+            animation: spiner 1s infinite;
+            @media screen and (min-width: 600px) {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+main {
+    padding: .5%;
+}
+.presentation {
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($secondary-color-invert, .03);
+    &__sentence {
+        margin: 7px 0px;
+        padding: 0%;
+        font-size: 1.5rem;
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & strong {
+            font-family: $text-bold;
+            text-align: center;
+        }
+        & em {
+            font-style: normal;
+            text-align: center;
+            font-family: $text-light;
+            font-size: $general-font-size;
+        }
+    }
+    &__btn {
+        @include primary-button();
+    }
+}
+.functioning {
+    padding-top: 1%;
+    background-color: rgba($secondary-color-invert, .02);
+    padding-left: $general-font-size;
+    &__heading {
+        margin-top: 0px;
+        font-family: $text;
+    }
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        .btn {
+            width: 100%;
+           @include button(rgba($primary-color, 0));
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding-left: 0px;
+           padding-right: 3rem;
+            margin: $general-font-size 0%;
+           white-space: nowrap;
+           .fa-solid {
+               transition: all 800ms;
+           }
+           .btn-number {
+               border-radius: $general-font-size;
+               background-color: $primary-color;
+               padding: .27rem .5rem;
+               font-size: .7em;
+               color: white;
+               transform: translateX(-.4rem);
+           }
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .functioning {
+        &__btns {
+            margin-top: $general-font-size;
+            margin-right: $general-font-size;
+            flex-direction: row;
+            .btn {
+                width: 30%;
+                margin: 0rem $general-font-size;
+            }
+        }
+    }
+}
+@media screen and (min-width:600px) and (max-width: 992px) {
+    .functioning {
+        &__btns {
+            width: 50%;
+            flex-wrap: wrap;
+            .btn {
+                width: auto;
+            }
+        }
+    }
+}
+.restaurants-liste {
+    padding: 0rem $general-font-size;
+    &__heading {
+        font-family: $text;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        border-radius: .7rem;
+        text-decoration: none;
+        padding: 1%;
+        color: black;
+        background-color: white;
+        margin-bottom: $general-font-size;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px $general-font-size rgba(0, 0, 0, 0.356);
+        &__bg {
+            border-radius: .5rem .5rem 0rem 0rem;
+            display: flex;
+        justify-content: end;
+        align-items: baseline;
+            width: 100%;
+            height: 50vw;
+            &--la-palette-du-gout {
+                @include restaurant-bg("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg")
+            }
+            &--la-note-enchante {
+                @include restaurant-bg("../image/stil-u2Lp8tXIcjw-unsplash.jpg")
+            }
+            &--a-la-francaise {
+                @include restaurant-bg("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg")
+            }
+            &--le-delice-des-sens {
+                @include restaurant-bg("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg")
+            }
+            &__new {
+                font-family: $text;
+                background-color: lighten($secondary-color-invert, 57%);
+                display: inline-block;
+                margin: 5%;
+                padding: 1%;
+            }
+            
+       
+        }
+        &__content {
+            background-color: white;
+            padding: 0% 2%;
+            display: flex;
+            justify-content: space-between;
+            &__info {
+                display: flex;
+                flex-direction: column;
+                &__name {
+                    margin-top: $general-font-size;
+                    font-weight: normal;
+                    margin-bottom: 0px;
+                    font-size: $general-font-size;
+                    font-family: $text-bold;
+                }
+                &__local {
+                    font-style: normal;
+                    font-size: .8rem;
+                    font-family: $text-light;
+                }
+            }
+            &__button-favorie {
+                width: $general-font-size;
+                position: relative;
+                display: inline;
+                margin-top: $general-font-size;
+                margin-right: .2rem;
+                cursor: pointer;
+                font-size: $general-font-size;
+                background-color: transparent;
+                border: 0px black none;
+                @include favorit-color-changer();
+                
+            }
+        }
+
+    }
+}
+@media screen and (min-width: 600px) {
+    .restaurants-liste {
+        &__cards {
+            margin-top: 2rem;
+            align-items: center;
+        }
+        .card {
+            padding: 0px;
+            padding-bottom: .5rem;
+            margin-bottom: 3rem;
+            width: 85%;
+            box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.356);
+            &__bg {
+                width: 100%;
+                height: 35vw;
+            }
+            &__content {
+                &__info {
+                   &__name {
+                       font-size: 1.5rem;
+                   }
+                   &__local {
+                       font-size: 1.2rem;
+                   }
+                }
+            }
+        }
+        
+    }
+}
+.location {
+    display: flex;
+    justify-content: center;
+    font-family: $text;
+    font-size: 1.2rem;
+    background-color: rgba($tertiary-color-invert, .05);
+    &__dot {
+        cursor: pointer;
+        font-size: 1.2rem;
+        border: 0px black none;
+        background-color: transparent;
+    }
+}

@@ -12,3 +12,25 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $initial-font-size: 5vw;
+$desktop-init-size: 16px;
+$tertiary-color-invert: invert($tertiary-color);
+$secondary-color-invert: invert($secondary-color);
+$primary-color-invert: invert($primary-color);
+$primary-color-saturate: #db57ba;
+$general-font-size: 1rem;
+$gradient-color: linear-gradient(to bottom right, $primary-color-saturate, $primary-color);
+$gradient-color-lighten: linear-gradient(to bottom right, $primary-color-saturate, lighten($primary-color, 13%));
+$appetizers-display-duration: 600ms;
+$dishes-display-duration: $appetizers-display-duration;
+$desserts-display-duration: $appetizers-display-duration;
+$initial-delay: 400ms;
+$section-map:(
+    appetizer:("#appetizer-1", "#appetizer-2", "#appetizer-3", "#appetizer-4"),
+    dishe:("#dishe-1", "#dishe-2", "#dishe-3"),
+    dessert:("#dessert-1", "#dessert-2", "#dessert-3"),
+);
+$delay-map:(
+    ".appetizers": $initial-delay,
+    ".dishes": ($appetizers-display-duration + $initial-delay) - 400ms,
+    ".desserts": ($appetizers-display-duration + $dishes-display-duration + $initial-delay) - 700ms,
+);

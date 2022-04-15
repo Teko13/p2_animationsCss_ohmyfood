@@ -1,0 +1,168 @@
+.cover-laPaletteDG {
+
+    @include cover("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg")
+}
+.cover-laNote {
+
+    @include cover("../image/stil-u2Lp8tXIcjw-unsplash.jpg")
+}
+.cover-aLaFrancaise {
+
+    @include cover("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg")
+}
+.cover-leDeliceDS {
+
+    @include cover("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg")
+}
+.cover-box {
+    overflow: hidden;
+}
+.restaurant-page {
+    width: 100vw;
+    &__main {
+        transform: scaleY(1.027);
+        border-radius: $general-font-size $general-font-size 0rem 0rem;
+        background-color: white;
+        padding: 0rem .5rem;
+        &__menu {
+            display: flex;
+            flex-direction: column;
+           &__heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: $logo-titre;
+            & .fa-heart-button {
+                width: $general-font-size;
+                position: relative;
+                display: inline;
+                margin-right: .2rem;
+                cursor: pointer;
+                font-size: $general-font-size;
+                background-color: transparent;
+                border: 0px black none;
+                @include favorit-color-changer();
+            }
+           }
+           &__meals {
+               margin-bottom: .8rem;
+               &__heading {
+                   font-family: $text-light;
+                   text-transform: uppercase;
+                   border-bottom: 4px $tertiary-color solid;
+                   color: darken($tertiary-color, 53%);
+                   width: 17%;
+               }
+               &__btn {
+                   cursor: pointer;
+                   white-space: nowrap;
+                   margin: $general-font-size 0rem;
+                   background-color: white;
+                   border-radius: .3rem;
+                   width: 100%;
+                   justify-content: space-between;
+                   display: flex;
+                   overflow-x: hidden;
+                   box-shadow: 0rem 0rem .5rem rgba(0, 0, 0, 0.308);
+                   .meals-infos {
+                       display: block;
+                       width: 70%;
+                       margin-right: 0%;
+                       font-size: .8rem;
+                       padding-left: .5rem;
+                       margin-top: auto;
+                       margin-bottom: auto;
+                       display: flex;
+                       flex-direction: column;
+                       .meals-name {
+                           margin-top: 0%;
+                           margin-bottom: 0%;
+                           font-family: $text-medium;
+                       }
+                       .meals-name-more {
+                        font-family: $text-thin;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                    }
+                   }
+                   &__slide-checker {
+                       display: flex;
+                       .meals-price {
+                        background-color: inherit;
+                        font-size: .8rem;
+                        align-self: flex-end;
+                        font-style: normal;
+                        font-family: $text-bold;
+                        margin-right: 0rem;
+                        transform: translateX(2rem);
+                        margin-bottom: .26rem;
+                    }
+                    .check-icon {
+                        padding: .7rem 0rem;
+                        width: 2.3rem;
+                        background-color: $tertiary-color;
+                        display: block;
+                        border-radius: 0rem .3rem .3rem 0rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: $general-font-size;
+                        transform: translateX(2.3rem);
+                        &__fas {
+                            font-size: $general-font-size;
+                            color: white;
+                        }
+                    }
+                   }
+               }
+           }
+        }
+        &__validation-btn {
+            @include primary-button();
+        }
+    }
+}
+@media screen and (min-width:600px) {
+    .restaurant-page {
+        &__main {
+            &__menu {
+                &__meals {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__heading {
+                        width: 4%;
+                    }
+                    &__btn {
+                        width: 50%;
+                        margin: 1.5rem 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 992px) {
+ .restaurant-page {
+     &__main {
+         &__menu {
+             &__meals {
+                 &__btn {
+                     width: 70%;
+                     .meals-infos {
+                        font-size: 1.3rem;
+                     }
+                     &__slide-checker {
+                         .meals-price {
+                             font-size: 1.3rem;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+ }
+}
+@include meals-animation($delay-map);
+@include meals-checkbox();

@@ -1,0 +1,50 @@
+.contact-heading {
+    font-size: 1.5rem;
+    font-family: $text-bold;
+    margin-left: $general-font-size;
+}
+.contact {
+    margin-left: $general-font-size;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: $text;
+    font-size: $general-font-size;
+    .email-input, .message-input {
+        border: 1px solid;
+        font-size: .9rem;
+        padding: .4rem;
+        border-radius: .7rem;
+        margin-left: .5rem;
+        margin-bottom: $general-font-size;
+        width: 80%;
+        &:focus {
+            outline: none;
+        }
+    }
+    .email-input {
+        &:invalid {
+            border-color: red;
+        }
+        border-radius: 5rem;
+        transition: all 1s;
+    
+    }
+    label {
+        margin-bottom: .5rem;
+    }
+    .send-button {
+        @include primary-button();
+        .fas {
+            margin-left: .2rem;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .contact {
+        align-items: center;
+        .email-input, .message-input {
+            width: 50%;
+        }
+    }
+}

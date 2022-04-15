@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.384);
+    &__heading {
+        font-family: $logo-titre;
+        margin: 0% auto;
+        
+    }
+    &__return-btn {
+        font-size: 1.1rem;
+        margin-left: $general-font-size;
+        color: black;
+    }
+}
+@media screen and (min-width: 600px) {
+ html {
+     font-size: $desktop-init-size;
+ }
+ .header {
+     font-size: $general-font-size;
+ }
+}
