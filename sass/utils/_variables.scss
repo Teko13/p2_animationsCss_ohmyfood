@@ -18,17 +18,22 @@ $secondary-color-invert: invert($secondary-color);
 $primary-color-invert: invert($primary-color);
 $primary-color-saturate: #db57ba;
 $general-font-size: 1rem;
+// gradient color for vaidation button 
 $gradient-color: linear-gradient(to bottom right, $primary-color-saturate, $primary-color);
 $gradient-color-lighten: linear-gradient(to bottom right, $primary-color-saturate, lighten($primary-color, 13%));
+// duration of meals animation on restaurant page loading
 $appetizers-display-duration: 600ms;
 $dishes-display-duration: $appetizers-display-duration;
 $desserts-display-duration: $appetizers-display-duration;
+// initial delay of meals appearance
 $initial-delay: 400ms;
+// map of meals selectors
 $section-map:(
     appetizer:("#appetizer-1", "#appetizer-2", "#appetizer-3", "#appetizer-4"),
     dishe:("#dishe-1", "#dishe-2", "#dishe-3"),
     dessert:("#dessert-1", "#dessert-2", "#dessert-3"),
 );
+// map of each meals appearance delay
 $delay-map:(
     ".appetizers": $initial-delay,
     ".dishes": ($appetizers-display-duration + $initial-delay) - 400ms,

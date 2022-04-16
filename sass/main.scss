@@ -1,15 +1,34 @@
+// for the breakpoint:
+// below 600px for mobile version;
+// between 600px and 992px for pad;
+// above 992px for desktop
 @use "sass:map";
+
+// import of text font
 @import "./base/typography.scss";
+
 @import "./utils/variables.scss";
+
 @import "./utils/mixins.scss";
+
 @import "./components/keyframes.scss";
+
 @import "./components/buttons.scss";
+
+// import of global rules (block-container...)
 @import "./base/generals";
+
+// import of home page rules
 @import "./pages/homePage";
+
+// import of header rules
 @import "./layouts/header";
+
+// imprt of footer rules
 @import "./layouts/footer";
+
+// import of restaurant page rules
 @import "./pages/menus";
+
+// import of contact page rules
 @import "./pages/cotact";
-
-
-

@@ -1,24 +1,4 @@
-@mixin button($bg-color: transparent, $font: $text, $font-size: $general-font-size) {
-    cursor: pointer;
-    padding: 4% 5%;
-    border: 0px transparent none;
-    border-radius: 1.3rem;
-    box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
-    font-family: $font;
-    font-size: $font-size;
-    background: $bg-color;
-    transition: all 800ms;
-    &:hover {
-        background: rgba($bg-color, 0.2);
-        box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
-        .fa-solid {
-            color: $primary-color;
-        } 
-    }
-    @media screen and (min-width: 600px) {
-        padding: 1rem 1.3rem;
-    }
-}
+// meals appearance animation mixin when loading restaurant page
 @mixin meals-animation($delay) {
     @each $section, $animation-delay in $delay {
         #{$section} {
@@ -28,11 +8,13 @@
         }
     }
 }
+// restaurant image builder
 @mixin restaurant-bg($url) {
     background-image: url($url);
     background-size: cover;
     background-position: center;
 }
+// restaurant page cover builder 
 @mixin cover($url) {
     width: 100vw;
     height: 55vw;
@@ -43,6 +25,7 @@
     }
     
 }
+// restaurant saving button builder
 @mixin favorit-color-changer() {
     & .fa-solid {
         position: absolute;
@@ -61,6 +44,7 @@
         
     }
 }
+// meals checking animation builder
 @mixin meals-checkbox($map: $section-map) {
     @each $section, $meals in $map {
        @each $val in meals
@@ -89,43 +73,4 @@
            }
        }
     }
-}
-@mixin primary-button($bg-color: $gradient-color, $font: $text, $font-size: $general-font-size) {
-    padding: 4% 5%;
-            border: 0px transparent none;
-            cursor: pointer;
-            border-radius: 1.3rem;
-            box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.208);
-            font-family: $font;
-            font-size: $font-size;
-            background: $bg-color;
-            z-index: 1;
-            position: relative;
-            color: white;
-            display: inline;
-            align-self: center;
-            margin: 1.5rem 0rem;
-            transition: all 800ms;
-            &:hover {
-                box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.408);
-               &::after {
-                    opacity: 1;
-                }
-            }
-            &::after {
-                content: "";
-                border-radius: 1.3rem;
-                background: $gradient-color-lighten;
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                opacity: 0;
-                transition: opacity 800ms;
-            }
-            @media screen and (min-width: 600px) {
-                padding: 1rem 1.3rem;
-            }
 }
